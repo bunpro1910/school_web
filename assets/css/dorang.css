@@ -1,16 +1,4 @@
-/*!
-=========================================================
-* Dorang Landing page V 1.0
-=========================================================
 
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700");
 :root {
   --blue: #007bff;
@@ -4461,15 +4449,14 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  
 }
 
 .nav-link {
-  display: block;
+  
   padding: 0.5rem 1rem;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-border-radius: 5px;
+
+  border-radius: 5px;
 
 }
 
@@ -11260,6 +11247,7 @@ line-height: -45px;
 }
 
 .page-navbar .nav-navbar .nav-item {
+  
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -11268,6 +11256,7 @@ line-height: -45px;
   -webkit-flex-basis: 0;
       -ms-flex-preferred-size: 0;
           flex-basis: 0;
+  
 }
 
 .page-navbar .nav-navbar .nav-link {
