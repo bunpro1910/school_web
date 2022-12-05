@@ -1,0 +1,31 @@
+{
+  "name": "school_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bunpro1910/school_web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bunpro1910/school_web/issues"
+  },
+  "homepage": "https://github.com/bunpro1910/school_web#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

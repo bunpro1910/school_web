@@ -3,14 +3,11 @@ const app = express();
 const url  =require('url');
 const path = require('path')
 const cors =require("cors")
-const request = require("request");
 const port = process.env.PORT || 3000;
 const Student_Routes = require('./Routes/Student')
 const Main_Routes = require('./Routes/Main')
 const ejs =require('ejs') 
 var cookieSession = require('cookie-session')
-const sessions = require('express-session')
-const { fileURLToPath } =require('url')
 const morgan =require('morgan')
 const bodyParser = require('body-parser')
 app.set('trust proxy', 1)
