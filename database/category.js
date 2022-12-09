@@ -10,7 +10,7 @@ let lettures = new lecture()
     }
     createtable(){
         let query = `create table if not exists public.category (
-            id character varying primary key, 
+            cateid character varying primary key, 
             name character varying, 
             description character varying
             );`

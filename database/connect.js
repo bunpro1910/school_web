@@ -1,6 +1,7 @@
 const Connection =require('pg');
 var connection = Connection.Pool
 const course =require("./course")
+const lecture =require("./lecture")
 // const myconect = new connection({
 //     user: 'sqerguwe',
 //     host: 'mouse.db.elephantsql.com',
@@ -11,10 +12,10 @@ const course =require("./course")
 //     });
 
     const myconect = new connection({
-        user: 'shool_web_user',
-        host: 'dpg-ce9bj682i3ms217qhu7g-a.singapore-postgres.render.com',
-        database: 'shool_web',
-        password: 'VFdQonbNIS2TnniblwiytKXpK1WYK3yX',
+        user: 'school_web_user',
+        host: 'dpg-ce9ccmun6mpgqu8n4o80-a.singapore-postgres.render.com',
+        database: 'school_web',
+        password: 'VDe73EGMoiMM1CK4LmKlPZ98cPVew6dg',
         port: 5432,
         ssl: {rejectUnauthorized: false},
         });
@@ -30,6 +31,9 @@ let connect = async(query)=>{
 }
 let createdb = async function() {
     let Course = new course();
-    connect(Course.createtable)
+    let lectures = new lecture();
+    console.log(lectures.createtable())
+    console.log(Course.createtable())
 }
+createdb()
 module.exports = connect
