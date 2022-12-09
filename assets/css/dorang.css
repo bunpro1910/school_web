@@ -11673,10 +11673,13 @@ body.light-theme nav.page-navbar .nav-link {
 }
 
 body.light-theme nav.page-navbar.affix {
-  background: #fff;
+  background: #e6e6e6;
   border-bottom: 1px solid rgba(73, 80, 87, 0.2);
 }
-
+body.light-theme nav.page-navbar.affix-top {
+  background: #e6e6e6;
+  
+}
 body.light-theme nav.page-navbar.affix .nav-link {
   color: #343a40;
 }
@@ -11788,4 +11791,58 @@ body.light-theme .contact-section .footer .links a {
 
 body.dark-theme {
   background: #212529;
+}
+.error-text{
+    color:red !important;
+    font-size:30px;
+}
+
+.content{
+  width:100%;
+  color:black;
+  
+}
+.main-container{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+
+  
+  margin-top:150px;
+}
+.left-image{
+  
+  width:80%;
+}
+ .left{
+  text-align:center;
+}
+.right{
+  width: 80%;
+}
+.menu{
+    list-style: square;
+    
+}
+.ul-heading{
+  color:black;
+  text-align:center;
+}
+.menu-item{
+  padding-top:8px;
+}
+.course{
+  text-align:center;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+.course-width{
+  width:80%;
+}
+ .category{
+  z-index: 1;
+  width:80%;
+  text-align: left ;
+  margin-bottom: 50px;
 }

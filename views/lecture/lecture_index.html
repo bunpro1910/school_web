@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Dorang landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Dorang | Free Bootstrap 4.3.x template</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="/assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Dorang main styles -->
+	<link rel="stylesheet" href="/assets/css/dorang.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="light-theme">
+    
+    <!-- page navbar -->
+    <nav class="page-navbar" data-spy="affix" data-offset-top="10">
+        <ul class="nav-navbar container">
+            <% if(typeof user == 'undefined') {%> 
+                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+            <% }else {%> 
+                <li class="nav-item"><a href="index" class="nav-link">home</a></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"><a href="/login" class="nav-link"><%= user.id %> </a></li>
+                <li class="nav-item"><a href="/logout" class="nav-link">logout </a></li>
+            <% } %> 
+            
+            
+        </ul>
+    </nav><!-- end of page navbar -->
+
+
+
+
+
+    <!-- modal -->
+    
+
+    <!-- page container -->
+    <div class="main-container">
+        <div class="content left">
+            <img class ="left-image"src="https://ap.greenwich.edu.vn/images/4.jpg?r=1091" alt="">
+        </div>
+        <div class="content right">
+            <ul class="menu">
+                <h6 class="ul-heading">Information Access</h6>
+                <li class="menu-item" ><a href="course">Manager Course</a></li>
+                <li class="menu-item" ><a href="">Check Attendance</a></li>
+                <li class="menu-item" ><a href="">1</a></li>
+                <li class="menu-item" ><a href="">Manager Course</a></li>
+                <li class="menu-item" ><a href="">Manager Course</a></li>
+                <li class="menu-item" ><a href="">Manager Course</a></li>
+                <li class="menu-item" ><a href="">Manager Course</a></li>
+                <li class="menu-item" ><a href="">Manager Course</a></li>
+                <li class="menu-item" ><a href="">Manager Course</a></li>
+                
+            </ul>
+        </div>
+       
+    </div> <!-- end of page container -->
+
+    <!--footer & pre footer -->
+    <div class="contact-section">
+        <div class="overlay"></div>
+        <!-- container -->
+        <div class="container">
+            
+
+            <!-- footer -->
+            <footer class="footer">
+                <p class="infos">&copy; <script>document.write(new Date().getFullYear())</script>, Made with <i class="ti-heart text-danger"></i> by <a href="http://www.devcrud.com">DevCRUD</a></p>       
+                <span>|</span>  
+                <div class="links">
+                    <a href="#">About</a>
+                    <a href="#">Explore</a>
+                    <a href="#">Journal</a>
+                </div>
+            </footer><!-- end of footer -->
+
+        </div><!-- end of container -->
+    </div><!-- end of pre footer -->
+
+    <!-- core  -->
+    <script src="/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Dorang js -->
+    <script src="/assets/js/dorang.js"></script>
+
+</body>
+</html>
