@@ -11846,3 +11846,12 @@ body.dark-theme {
   text-align: left ;
   margin-bottom: 50px;
 }
+.table_date{
+  
+  font-size: 30px;
+}
+.date-wrap{
+  display:flex;
+  margin-bottom:20px;
+  justify-content: space-between;
+}

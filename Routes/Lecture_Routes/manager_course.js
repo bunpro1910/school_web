@@ -20,17 +20,18 @@ let index = async (req,res)=>{
             category:category
         }
     )
-
-    
-
-         
-    
+  
 }
 async function getlist(req){
-    let query =`select c.id,c.name,c.description,c.lecid,l.name as lecname from public.course as c,public.lecture as l where c.lecid = l.lecid and l.gmail = '${req.session.user.id}' ORDER BY name`
-    console.log(req.query.cateid)
+    let query =`select c.id,c.name,c.description,c.lecid,l.name as lecname 
+    from public.course as c,public.lecture as l 
+    where c.lecid = l.lecid and l.gmail = '${req.session.user.id}' 
+    ORDER BY name`
     if( req.query.cateid){
-        query =`select c.id,c.name,c.description,c.lecid,l.name as lecname,cate.name as catename from public.course as c,public.category as cate, public.lecture as l where c.lecid = l.lecid and l.gmail = '${req.session.user.id}' and cate.id = '${req.query.cateid}' and cate.id = c.categoryid ORDER BY name`
+        query =`select c.id,c.name,c.description,c.lecid,l.name as lecname,cate.name as catename 
+        from public.course as c,public.category as cate, public.lecture as l 
+        where c.lecid = l.lecid and l.gmail = '${req.session.user.id}' and cate.cateid = '${req.query.cateid}' and cate.cateid = c.cateid 
+        ORDER BY name`
     }
     
     let result = await connect(query)

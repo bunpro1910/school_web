@@ -22,6 +22,7 @@
                 <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
             <% }else {%> 
                 <li class="nav-item"><a href="index" class="nav-link">home</a></li>
+                <li class="nav-item"><a href="/login" class="nav-link">Add Course</a></li>
                 <li class="nav-item"></li>
                 <li class="nav-item"></li>
                 <li class="nav-item"></li>
@@ -37,30 +38,41 @@
 
 
 
-    <!-- modal -->
-    
 
     <!-- page container -->
-    <div class="main-container">
-        <div class="content left">
-            <img class ="left-image"src="https://ap.greenwich.edu.vn/images/4.jpg?r=1091" alt="">
+    <div class="main-container course">
+        <div class="category">
+            
+            <table class="table">
+                <div class="date-wrap">
+                    <a href="attendance?previous=<%= datefull%>" class="table_date">Previous Week</a>
+                    <div class="table_date"><%= date %> </div>
+                    <a href="attendance?next=<%= datefull%>" class="table_date">Next Week</a>
+                </div>
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                    <th scope="col">Saturday</th>
+                    <th scope="col">Sunday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
-        <div class="content right">
-            <ul class="menu">
-                <h6 class="ul-heading">Information Access</h6>
-                <li class="menu-item" ><a href="course">Manager Course</a></li>
-                <li class="menu-item" ><a href="attendance">Check Attendance</a></li>
-                <li class="menu-item" ><a href="">1</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                
-            </ul>
-        </div>
-       
     </div> <!-- end of page container -->
 
     <!--footer & pre footer -->

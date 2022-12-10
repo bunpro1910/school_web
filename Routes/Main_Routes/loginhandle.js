@@ -2,7 +2,7 @@
 const connect =require("../../database/connect")
 const path = require('path')
 let handlelogin = async (req,res)=>{
-    let query =`select * from public.account where account_id = '${req.body.userid}' and password = '${req.body.password}'`
+    let query =`select * from public.account where lower (account_id) = lower('${req.body.userid}') and password = '${req.body.password}'`
     let account = await connect(query)
     if(account.rowCount >0){
         req.session.user ={
@@ -11,6 +11,8 @@ let handlelogin = async (req,res)=>{
         }
         if(account.rows[0].roleid == 1){
             res.redirect(`/lecture/index`)
+        }else if(account.rows[0].roleid == 2){
+            res.redirect(`/student/index`)
         }
         
         return

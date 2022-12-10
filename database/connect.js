@@ -32,8 +32,8 @@ let connect = async(query)=>{
 let createdb = async function() {
     let Course = new course();
     let lectures = new lecture();
-    console.log(lectures.createtable())
-    console.log(Course.createtable())
+    lectures.createtable()
+    Course.createtable()
 }
 createdb()
 module.exports = connect

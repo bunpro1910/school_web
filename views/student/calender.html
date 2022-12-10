@@ -42,46 +42,82 @@
     <!-- page container -->
     <div class="main-container course">
         <div class="category">
-            <ul class= "menu">Category  
-                <% if(typeof category != 'undefined') {%> 
-                    <% category.rows.forEach(cate => {%> 
-                        <li class="menu-item"><a href="course?cateid=<%= cate.cateid%>"><%= cate.name %></a></li>
-                    <% }); %> 
-                <% } %> 
-            </ul>
+            
+            <table class="table">
+                <div class="date-wrap">
+                    <a href="calender?previous=<%= datefull%>" class="table_date">Previous Week</a>
+                    <div class="table_date"><%= date %> </div>
+                    <a href="calender?next=<%= datefull%>" class="table_date">Next Week</a>
+                </div>
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                    <th scope="col">Saturday</th>
+                    <th scope="col">Sunday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
-
-        <!-- row -->
-        <div class="row mb-4 course-width">
-            <% if(typeof course !== 'undefined' ) {
-             course.rows.forEach(courses => { %>
-                <div class="col-md-4">
-                <a href="coursedetail?id=<%= courses.id %>" class="overlay-img">
-                    <img src="https://cms.greenwich.edu.vn/pluginfile.php/1/theme_adaptable/frontpagerendererdefaultimage/1661998272/edu-survey-landing-image.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, weber Landing page">  
-                    <div class="overlay"></div> 
-                    <div class="des">
-                        <h1 class="title"><%= courses.name%></h1>
-                        <h6 class="subtitle"><%= courses.lecname%></p>
-                        <p><%= courses.description%></p>
-                    </div>          
-                </a>
-            </div>
-            <% })}else{ %>  
-            <p class="error-text">don't have any course</p>
-            <% } %>
-  
-   
-        </div><!-- end of row -->
-
-        
-
-
-       
-        <!-- row -->
-       
-
-       
-
     </div> <!-- end of page container -->
 
     <!--footer & pre footer -->
