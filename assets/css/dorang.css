@@ -11853,5 +11853,6 @@ body.dark-theme {
 .date-wrap{
   display:flex;
   margin-bottom:20px;
-  justify-content: space-between;
+  justify-content: center;
+ 
 }

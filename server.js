@@ -28,7 +28,6 @@ app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000 // 24 hours
   }))
 
-
 app.use("/",Main_Routes)
 app.use("/lecture",Lecture_Routes)
 app.use("/student",Student_Routes)
