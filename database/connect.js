@@ -26,6 +26,7 @@ let connect = async(query)=>{
         return result
     }catch(e){
         console.log(e)
+        
     }
     
 }
