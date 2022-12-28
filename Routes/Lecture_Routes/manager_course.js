@@ -1,12 +1,11 @@
 const path = require('path')
-const {checklecture} =require('../../Models/check')
 
 const connect = require('../../database/connect')
 
 
 let index = async (req,res)=>{
     
-    if(!checklecture(req)){res.redirect("/login") ; return}
+   
     let result = await getlist(req)
 
     let query2 = `select * from public.category `

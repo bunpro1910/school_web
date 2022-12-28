@@ -4,7 +4,7 @@ const url  =require('url');
 const path = require('path')
 const cors =require("cors")
 const port = process.env.PORT || 3000;
-
+const {checklecture} = require('./Models/check')
 const Main_Routes = require('./Routes/Main')
 const Lecture_Routes =require('./Routes/Lecture')
 const Student_Routes =require('./Routes/Student')
@@ -29,7 +29,8 @@ app.use(cookieSession({
   }))
 
 app.use("/",Main_Routes)
-app.use("/lecture",Lecture_Routes)
+app.use("/lecture",checklecture,Lecture_Routes)
+
 app.use("/student",Student_Routes)
 
 

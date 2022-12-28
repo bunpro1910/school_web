@@ -1,10 +1,12 @@
-let checklecture= (req)=>{
+let checklecture= (req,res, next)=>{
+    
     if(req.session.user){
         if(req.session.user.role==1){
-            return true
+            next()
+            return
         }
     }
-    return false
+    res.redirect("/login")
 }
 let checkstudent = (req)=>{
     if(req.session.user){

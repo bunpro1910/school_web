@@ -22,6 +22,7 @@
                 <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
             <% }else {%> 
                 <li class="nav-item"><a href="index" class="nav-link">home</a></li>
+                <li class="nav-item"><a href="/login" class="nav-link">Add Course</a></li>
                 <li class="nav-item"></li>
                 <li class="nav-item"></li>
                 <li class="nav-item"></li>
@@ -37,30 +38,33 @@
 
 
 
-    <!-- modal -->
-    
 
     <!-- page container -->
-    <div class="main-container">
-        <div class="content left">
-            <img class ="left-image"src="https://ap.greenwich.edu.vn/images/4.jpg?r=1091" alt="">
+    <div class="main-container course">
+        <div class="category">
+            
+            <table class="table">
+              <div class="date-wrap">
+                <div class="table_date"><%= classid  %>  </div>
+            </div>
+            
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Student ID</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Image</th>
+                  </tr>
+                </thead> 
+                <tbody>
+                  <% if(typeof table != 'undefined') {%>
+                    <% table.map(item=>{ %> 
+                      <%- item %> 
+                        
+                  <% })} %> 
+                </tbody>
+              </table>
         </div>
-        <div class="content right">
-            <ul class="menu">
-                <h6 class="ul-heading">Information Access</h6>
-                <li class="menu-item" ><a href="course">Manager Course</a></li>
-                <li class="menu-item" ><a href="attendance">Check Attendance</a></li>
-                <li class="menu-item" ><a href="calender">View calender</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                <li class="menu-item" ><a href="">Manager Course</a></li>
-                
-            </ul>
-        </div>
-       
     </div> <!-- end of page container -->
 
     <!--footer & pre footer -->

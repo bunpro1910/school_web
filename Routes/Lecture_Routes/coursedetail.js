@@ -1,12 +1,12 @@
 const path = require('path')
-const {checklecture} =require('../../Models/check')
+
 
 const connect = require('../../database/connect')
 
 
 let coursedetail = async (req,res)=>{
     
-    if(!checklecture(req)){res.redirect("/login") ; return}
+   
     if(req.query.id == undefined){
         res.redirect("index")
         return

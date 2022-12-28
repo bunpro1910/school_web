@@ -44,14 +44,17 @@
         <div class="category">
             
             <table class="table">
-              <div class="date-wrap">
-                <div class="table_date"><%= date %> </div>
-            </div>
+                <div class="date-wrap">
+                    <div class="table_date"><%= date  %>  </div>
+                </div>
+            
                 <thead class="thead-dark">
-                  <tr><% if(typeof list !='undefined') {%> 
-                    <th scope="col"><form action="" style="text-align: center;"><%- list %> <br>
-                        <input type="submit" value="view calender" style="margin-top:15px" >
-                    </form> </th>
+                  <tr>
+                    <% if(typeof list!="undefined"){ %> 
+                    <th scope="col" class="calender_width"><form action="" class="calender_form ">
+                        <%- list %>              
+                        <input type="submit" class = "submit_calender "value="View calender">
+                    </form></th>
                     <% } %> 
                     <th scope="col">Monday</th>
                     <th scope="col">Tuesday</th>
@@ -61,7 +64,7 @@
                     <th scope="col">Saturday</th>
                     <th scope="col">Sunday</th>
                   </tr>
-                </thead>
+                </thead> 
                 <tbody>
                   <% if(typeof table != 'undefined') {%>
                     <% table.map(item=>{ %> 
@@ -70,6 +73,7 @@
                   <% })} %> 
                 </tbody>
               </table>
+           
         </div>
     </div> <!-- end of page container -->
 

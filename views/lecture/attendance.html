@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Dorang landing page.">
     <meta name="author" content="Devcrud">
-    <title>Dorang | Free Bootstrap 4.3.x template</title>
+    <title>Attendace</title>
     <!-- font icons -->
     <link rel="stylesheet" href="/assets/vendors/themify-icons/css/themify-icons.css">
 
@@ -41,39 +41,41 @@
 
     <!-- page container -->
     <div class="main-container course">
-        <div class="category">
-            
+        <form class = "attendace-form" action="" method="post">
+        <div class="attendace-main">
+            <input type="hidden" name="schemaid" id="schemaid" value="<%= schemaid %> ">
+            <input type="hidden" name="isupdated" id="isupdated" value="<%= isupdated %>"> ">
+            <% if(typeof date != 'undefined') {%>
+                <input type="hidden" name="date" id="date" value="<%= date %>"> ">
+            <% } %>  
             <table class="table">
-                <div class="date-wrap">
-                    <a href="attendance?previous=<%= datefull%>" class="table_date">Previous Week</a>
-                    <div class="table_date"><%= date %> </div>
-                    <a href="attendance?next=<%= datefull%>" class="table_date">Next Week</a>
-                </div>
+              <div class="date-wrap">
+                <div class="table_date"><%= classid  %>  </div>
+            </div>
+            
                 <thead class="thead-dark">
                   <tr>
-                    <th scope="col">Monday</th>
-                    <th scope="col">Tuesday</th>
-                    <th scope="col">Wednesday</th>
-                    <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
-                    <th scope="col">Saturday</th>
-                    <th scope="col">Sunday</th>
+                    <th scope="col">Index</th>
+                    <th scope="col">Student ID</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Present</th>
+                    <th scope="col">Absent</th>
                   </tr>
-                </thead>
+                </thead> 
                 <tbody>
-                  <tr>
-                    <td scope="row">Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                  </tr>
+                  <% if(typeof table != 'undefined') {%>
+                    <% table.map(item=>{ %> 
+                      <%- item %> 
+
+                  <% })} %> 
                 </tbody>
               </table>
+              <input  type="submit">
+              <a href="calender">back</a>
         </div>
-    </div> <!-- end of page container -->
+    </form>
+    </div>
 
     <!--footer & pre footer -->
     <div class="contact-section">
