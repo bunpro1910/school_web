@@ -1,7 +1,6 @@
 const express =require('express');
 const app = express();
 const url  =require('url');
-const path = require('path')
 const cors =require("cors")
 const port = process.env.PORT || 3000;
 const {checklecture} = require('./Models/check')
@@ -24,14 +23,8 @@ app.use('/assets',express.static((__dirname+ '/assets')))
 app.use(cookieSession({
     name: 'session',
     keys: ["phamlehaison"],
-  
     maxAge: 24 * 60 * 60 * 1000 // 24 hours
   }))
-
-app.use("/",Main_Routes)
-app.use("/lecture",checklecture,Lecture_Routes)
-
-app.use("/student",Student_Routes)
 
 
 app.use(cors())
@@ -59,7 +52,15 @@ app.use(function (req, res, next) {
 
 
 
+app.use("/",Main_Routes)
+app.use("/lecture",checklecture,Lecture_Routes)
 
+app.use("/student",Student_Routes)
+app.use("/staff",Student_Routes)
+app.use('*',(req,res)=>{
+    res.status(404)
+    res.redirect("/error")
+})
 
 
 
